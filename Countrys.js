@@ -13,7 +13,6 @@ Country.prototype.getCountry = function(country) {
     let h2Country = document.createElement('h3');
     h2Country.innerText = country;
     body.appendChild(h2Country);
-
 };
 
 // en prototyp som gör att jag kan sätta in det landets rätta tid genom att ändra dens utc tid.
@@ -29,7 +28,7 @@ Country.prototype.getTime = function(time) {
         changeDate = `${changeDate} ${date.getUTCMinutes()}`
         this.time = changeDate;
         let h3Times = document.createElement('h3');
-        h3Times.innerText = changeDate;
+        h3Times.innerText = `Time: ${changeDate}`;
         body.appendChild(h3Times);
     } else {
         let num = parseInt(substring2);
@@ -39,7 +38,7 @@ Country.prototype.getTime = function(time) {
         this.time = changeDate;
 
         let h3Times = document.createElement('h3');
-        h3Times.innerText = changeDate;
+        h3Times.innerText = `Time: ${changeDate}`;
         body.appendChild(h3Times);
     }
 };
